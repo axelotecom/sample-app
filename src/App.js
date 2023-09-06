@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
 
+const API_URL = process.env.REACT_APP_API_HOST || 'http://localhost:3001';
+
 function App() {
 
     const [status, setStatus] = useState({});
 
     useEffect(() => {
-        fetch(`${process.env.HOST}/api/status`).then(async (res) => {
+        fetch(`${API_URL}/api/status`).then(async (res) => {
             setStatus((await res.json()));
         });
     }, []);

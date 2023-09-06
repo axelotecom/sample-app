@@ -24,7 +24,7 @@
     "prod": "set PORT=3001 && set PRODUCTION=true && ts-node server.ts",
     "dev-api" : "set PORT=3001 && nodemon --watch \"api/**\" --ext \"ts\" --exec \"ts-node server.ts\"",
     "start": "concurrently \"npm run dev-api\" \"react-scripts start\"",
-    "build": "react-scripts build",
+    "build": "set REACT_APP_API_HOST=https://sample-app.axelote.com && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
