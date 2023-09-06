@@ -39,7 +39,17 @@ Runs the API and frontend under single app.
 Requires `npm run build` first.
 
 ### Docker build
+```bash
 docker build -t sample-app:1 .
+```
 
 ### Docker run
+```bash
 docker run -p 5000:3001 sample-app:1
+```
+
+### Build for Axelote
+After docker build, you need to save image as a archive:
+```bash
+docker save -o sample-app-1.tar sample-app:1
+```
