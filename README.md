@@ -37,3 +37,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Runs the API and frontend under single app. 
 Requires `npm run build` first.
+
+### Docker build
+docker build -t sample-app:1 .
+
+### Docker run
+docker run -p 5000:3001 sample-app:1

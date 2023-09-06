@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
 
-const API_URL = process.env.REACT_APP_API_HOST || 'http://localhost:3001';
+const API_URL = process.env.REACT_APP_API_HOST === undefined ? 'http://localhost:3001' : process.env.REACT_APP_API_HOST;
 
 function App() {
 
